@@ -1,5 +1,5 @@
 # ros-tutorials
-Playing ROS with examples posed on ROS Wiki
+Playing ROS with examples post on ROS Wiki
 
 # Systems dependency
 - Ubuntu:14.04
