@@ -20,8 +20,10 @@ if __name__ == '__main__':
         'turtle2/cmd_vel', geometry_msgs.msg.Twist, queue_size=1)
 
     rate = rospy.Rate(10.0)
+    listener.waitForTransform("/turtle2", "/carrot1", rospy.Time(), rospy.Duration(4.0))
     while not rospy.is_shutdown():
         try:
+            listener.waitForTransform("/turtle2", "/carrot1", rospy.Time(), rospy.Duration(4.0))
             (trans, rot) = listener.lookupTransform(
                 '/turtle2', '/carrot1', rospy.Time(0))
         except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
